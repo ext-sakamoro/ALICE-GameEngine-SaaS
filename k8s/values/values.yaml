@@ -1,19 +1,17 @@
 global:
-  domain: ALICE_GAMEENGINE.alice-platform.com
+  domain: alice-gameengine.alice-platform.com
 frontend:
   replicas: 2
-  image: ALICE_GAMEENGINE/frontend:latest
+  image: alice-gameengine/frontend:latest
   resources: { requests: { cpu: 100m, memory: 128Mi }, limits: { cpu: 500m, memory: 512Mi } }
 apiGateway:
   replicas: 2
-  image: ALICE_GAMEENGINE/api-gateway:latest
+  image: alice-gameengine/api-gateway:latest
   resources: { requests: { cpu: 200m, memory: 256Mi }, limits: { cpu: 1000m, memory: 1Gi } }
 coreEngine:
   replicas: 2
-  image: ALICE_GAMEENGINE/core-engine:latest
+  image: alice-gameengine/core-engine:latest
   resources: { requests: { cpu: 500m, memory: 512Mi }, limits: { cpu: 2000m, memory: 2Gi } }
-redis:
-  image: redis:7-alpine
 autoscaling:
   enabled: true
   minReplicas: 2

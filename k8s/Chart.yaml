@@ -1,5 +1,5 @@
 apiVersion: v2
-name: ALICE_GAMEENGINE
+name: alice-gameengine
 description: ALICE GameEngine
 type: application
 version: 0.1.0
